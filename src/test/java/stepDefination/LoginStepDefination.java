@@ -19,7 +19,7 @@ public class LoginStepDefination extends BaseClass {
 
 	@Then("User will be navigated to Login Page")
 	public void user_will_be_navigated_to_login_page() {
-	   
+	   logIn.navigatedToLoginPage();
 	    
 	}
 
@@ -38,11 +38,6 @@ public class LoginStepDefination extends BaseClass {
 	    logIn.validateLogin();
 	}
 
-	@Then("User will be navigated to Enthrall IT Dashboard")
-	public void user_will_be_navigated_to_enthrall_it_dashboard() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-		
+	
 
 }

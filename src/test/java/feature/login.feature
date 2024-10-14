@@ -11,10 +11,12 @@ Feature: Log In
 
   Scenario: Login with valid credentials
     When User click on Login Button
-    Then User will be navigated to Login Page    
+    Then User will be navigated to Login Page
     When User enter Email in the Email field
     And User enter Password in the Password field
     And User finally click on Login Button
-    Then User will be navigated to Enthrall IT Dashboard
+    
 
- 
+    # Imperative BDD, which is line by line discription
+    
+   

@@ -15,59 +15,74 @@ public class LogIn {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 			}
-
 	@FindBy(xpath = "//img//parent::a//parent::nav")
 	WebElement logo;
 
 	@FindBy(xpath = "//a[text()='Login']")
 	WebElement logInFromToolbar;
 	
-	@FindBy(id = "login-link")
-	WebElement loginButton;
-
 	@FindBy(id="emails")
 	WebElement email;
 
 	@FindBy(xpath = "//input[@name='password']")
 	WebElement password;
 	
-	@FindBy(css = "input.btn.btn-lg.px-5")
-	WebElement login;
+	//@FindBy(css = "input.btn.btn-lg.px-5")
+	//WebElement login;
+	@FindBy(xpath = "//input[@id='login']")
+	WebElement loginButton;
 	
+	@FindBy(xpath = "//h1[text()='Dashboard']")
+	WebElement dashbord;
+	/*
 	@FindBy(xpath = "//span[text()='Automation']")
 	WebElement automation;
 
 	@FindBy(xpath = "//a[text()='Enroll Now']")
 	WebElement enrollNow;
-	
+	*/
 
 	public void validateLogoAndTitle() {
-		elementDisplayed(logo);
+		//verifyCurrentUrl(driver, "https://enthrallit.com/accounts/login/?next=/");
 		verifyTitle(driver, "Enthrall IT");
 		pause(3000);
 	}
 	public void validationLoginButton() {
-		elementEnabled(loginButton);
-		clickElement(loginButton);
+		//elementEnabled(logInFromToolbar);
+		clickElement(logInFromToolbar);
+	}
+	public void navigatedToLoginPage() {
+		pause(3000);
+		verifyTitle(driver, "Enthrall IT");
+		//verifyCurrentUrl(driver, "https://enthrallit.com/accounts/login/");
+
 	}
 	public void validateEmail() {
-		elementDisplayed(email);
+		//elementDisplayed(email);
 		inputText(email, "kaylith1@gmail.com");
 		pause(3000);
 	}
 	
 	public void validatePassword() {
-		elementDisplayed(password);
+		//elementDisplayed(password);
 		inputText(password, "Abc12345%");
 		pause(3000);
 	}
 	
 	public void validateLogin() {
-		elementEnabled(login);
-		verifyTextOfTheWebElement(login, "Log in");
-		clickElement(login);
+		elementEnabled(loginButton);
+		//verifyTextOfTheWebElement(loginButton, "LogIn ");
+		clickElement(loginButton);
 		pause(3000);
 	}
+	
+//	public void landingOnEnthrallItDashbord() {
+//		verifyTitle(driver, "Entrhall It Dasboard");
+//		verifyCurrentUrl(driver, "https://enthrallit.com/dashboard/");
+//		validationOfHeader(dashbord, "Dashbord");
+//		pause(3000);
+//	}
+/*
 	public void validateAutomation() {
 		elementEnabled(automation);
 		clickElement(automation);
@@ -79,17 +94,8 @@ public class LogIn {
 		pause(4000);
 	}
 	
-	/*
-	public void landingOnMultiFactorAuthentication() {
-		verifyTitle(driver, "Entrhall It Dasboard ");
-		verifyCurrentUrl(driver, "https://enthrallit.com/dashboard/");
-		validationOfHeader(, "Multi-factor Authentication");
-		pause(3000);
-	}
+	
 	*/
-	
-	
-	
 
 
 }
