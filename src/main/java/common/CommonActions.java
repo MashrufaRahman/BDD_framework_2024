@@ -20,9 +20,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.junit.Assert;
-
 import com.google.common.io.Files;
-
 import constants.Attribute;
 
 
@@ -186,7 +184,7 @@ public class CommonActions {
 		}
 	}
 
-	public void selectElelementFromDropdownOnebyOne(WebElement element, List<WebElement> elements) {
+	public static void selectElelementFromDropdownOnebyOne(WebElement element, List<WebElement> elements) {
 		try {
 			Select select = new Select(element);
 			for (int i = 1; i < elements.size(); i++) {
@@ -202,7 +200,7 @@ public class CommonActions {
 		}
 	}
 
-	public void selectDropdown(WebElement element, String value) {
+	public static void selectDropdown(WebElement element, String value) {
 		try {
 			Select select = new Select(element);
 			select.selectByVisibleText(value);
