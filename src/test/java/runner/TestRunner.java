@@ -8,9 +8,9 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		//tags 		= "@smoke or @sanity or @regression",
-		tags 		= "@login",
+		tags 		= "@smoke",
 		features 	= "src/test/java/feature",
-		glue 		= {"stepDefinition", "baseUtil"},
+		glue 		= {"stepDefination", "baseUtil"},
 		monochrome 	= false,
 		dryRun 		= false,
 		plugin 		= {"pretty", "html:target/report.html", "json:target/report.json", "junit:target/report.xml"}

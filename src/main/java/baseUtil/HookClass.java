@@ -1,4 +1,4 @@
-package baseUtil_7_26_2024;
+package baseUtil;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

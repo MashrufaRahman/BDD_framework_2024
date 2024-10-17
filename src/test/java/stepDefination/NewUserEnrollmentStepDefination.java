@@ -1,6 +1,6 @@
 package stepDefination;
 
-import baseUtil_7_26_2024.BaseClass;
+import baseUtil.BaseClass;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

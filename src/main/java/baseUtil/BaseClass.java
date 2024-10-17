@@ -1,4 +1,4 @@
-package baseUtil_7_26_2024;
+package baseUtil;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
