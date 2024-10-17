@@ -1,6 +1,6 @@
 package stepDefination;
 
-import baseUtil_7_26_2024.BaseClass;
+import baseUtil.BaseClass;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -37,6 +37,17 @@ public class LoginStepDefination extends BaseClass {
 	public void user_finally_click_on_login_button() {
 	    logIn.validateLogin();
 	}
+	
+	@When("User enter UserId as {string}")
+	public void user_enter_user_id_as(String string) {
+	    logIn.validateuserId(string);
+	}
+
+	@When("User enter Password as {string}")
+	public void user_enter_password_as(String string) {
+	    logIn.validatePassword(string);
+	}
+
 
 	
 

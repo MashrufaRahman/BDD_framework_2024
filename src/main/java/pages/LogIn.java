@@ -23,6 +23,9 @@ public class LogIn {
 	
 	@FindBy(id="emails")
 	WebElement email;
+	
+	@FindBy(id="emails")
+	WebElement userId;
 
 	@FindBy(xpath = "//input[@name='password']")
 	WebElement password;
@@ -58,7 +61,6 @@ public class LogIn {
 
 	}
 	public void validateEmail() {
-		//elementDisplayed(email);
 		inputText(email, "kaylith1@gmail.com");
 		pause(3000);
 	}
@@ -67,6 +69,18 @@ public class LogIn {
 		//elementDisplayed(password);
 		inputText(password, "Abc12345%");
 		pause(3000);
+	}
+	
+	public void validateuserId(String string) {
+		//elementDisplayed(email);
+		inputText(userId, string);
+		pause(4000);
+	}
+	
+	public void validatePassword(String string) {
+		elementDisplayed(password);
+		inputText(password, string);
+		pause(6000);
 	}
 	
 	public void validateLogin() {
